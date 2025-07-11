@@ -2,7 +2,6 @@ const IntroSection = () => {
   return (
     <section className="section intro-section" id="section2">
       <div className="intro-content">
-        <h2 className="intro-initials">T-A</h2>
         <p className="intro-description">
           I help brands craft meaningful stories and compelling visuals that deeply
           resonate with their audience, foster strong connections, build lasting loyalty,
