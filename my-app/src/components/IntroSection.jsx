@@ -1,16 +1,25 @@
 const IntroSection = () => {
   return (
     <section className="section intro-section" id="section2">
+      <div className="intro-top">
       <div className="intro-content">
         <p className="intro-description">
+        <div className="intro-image">
+            <img 
+              src="images/intro-image.webp" 
+              alt="Intro Image" 
+              className="intro-image"
+            />
+          </div>
           I help brands craft meaningful stories and compelling visuals that deeply
           resonate with their audience, foster strong connections, build lasting loyalty,
           and drive sustainable long-term growth.
         </p>
       </div>
+      </div>
 
       <hr className="section-divider" />
-      
+
       <div className="intro-bottom">
         <div className="intro-column">
           <h3 className="column-title">From A to Z</h3>
@@ -31,6 +40,8 @@ const IntroSection = () => {
           </p>
         </div>
       </div>
+      
+      
     </section>
   );
 };

@@ -4,6 +4,12 @@ import BrandSection from '../components/BrandSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
+import apexBg from '../images/apex-bg.jpg';
+import argusBg from '../images/argus-bg.jpg';
+import dionysosBg from '../images/dionysos-bg.jpg';
+import contactBg from '../images/contact-bg.jpg'
+
+
 const HomePage = () => {
   return (
     <>
@@ -12,20 +18,25 @@ const HomePage = () => {
       
       <BrandSection 
         id="section3" 
-        brandName="APEX ARCHITECTS" 
+        brandName="APEX ARCHITECTS"
+        image={apexBg} 
       />
 
       <BrandSection 
         id="section4" 
-        brandName="DIONYSOS RESORTS" 
+        brandName="DIONYSOS RESORTS"
+        image={dionysosBg} 
       />
       
       <BrandSection 
         id="section5" 
-        brandName="ARGUS EYEWEAR" 
+        brandName="ARGUS EYEWEAR"
+        image={argusBg} 
       />
       
-      <ContactSection />
+      <ContactSection
+      id="section6"
+      image={contactBg} />
       <Footer />
     </>
   );
