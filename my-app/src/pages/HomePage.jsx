@@ -8,6 +8,7 @@ import apexBg from '../images/apex-bg.jpg';
 import argusBg from '../images/argus-bg.jpg';
 import dionysosBg from '../images/dionysos-bg.jpg';
 import contactBg from '../images/contact-bg.jpg'
+import AllWorkSection from '../components/AllWorkSection';
 
 
 const HomePage = () => {
@@ -33,6 +34,8 @@ const HomePage = () => {
         brandName="ARGUS EYEWEAR"
         image={argusBg} 
       />
+
+      <AllWorkSection/>
       
       <ContactSection
       id="section6"

@@ -1,23 +1,26 @@
+import Button from './Button';
+
 const IntroSection = () => {
   return (
     <section className="section intro-section" id="section2">
       <div className="intro-top">
-      <div className="intro-content">
-        <p className="intro-description">
-        <div className="intro-image">
-            <img 
-              src="images/intro-image.webp" 
-              alt="Intro Image" 
-              className="intro-image"
-            />
-          </div>
-          I help brands craft meaningful stories and compelling visuals that deeply
-          resonate with their audience, foster strong connections, build lasting loyalty,
-          and drive sustainable long-term growth.
-        </p>
+        <div className="intro-content">
+          <p className="intro-description">
+            <div className="intro-image">
+              <img 
+                src="images/intro-image.webp" 
+                alt="Intro Image" 
+                className="intro-image"
+              />
+            </div>
+            I help brands craft meaningful stories and compelling visuals that deeply
+            resonate with their audience, foster strong connections, build lasting loyalty,
+            and drive sustainable long-term growth.
+          </p>
+        </div>
       </div>
-      </div>
-
+      
+      <div className="right-aligned-container">
       <hr className="section-divider" />
 
       <div className="intro-bottom">
@@ -28,7 +31,15 @@ const IntroSection = () => {
             Whether it's logo design, messaging, or strategy, I ensure everything 
             aligns for a cohesive and impactful brand.
           </p>
-          <a href="#" className="column-link">More about me</a>
+          <Button 
+            text="More about me" 
+            onClick={() => window.location.href = "#about"} 
+            width="fit-content"
+            padding="0.5rem 1.5rem"
+            textSize="1rem"
+            spanHeight="1.8rem"
+
+          />
         </div>
         
         <div className="intro-column">
@@ -40,8 +51,7 @@ const IntroSection = () => {
           </p>
         </div>
       </div>
-      
-      
+      </div>
     </section>
   );
 };
