@@ -21,13 +21,9 @@ html, body {
 
 /* FIXED INITIALS */
 .fixed-initials {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
   font-size: 2rem;
   font-weight: 700;
-  z-index: 1000;
-  pointer-events: none;
+  z-index: 1001;
 }
 
 /* HEADER STYLES */
@@ -35,11 +31,119 @@ html, body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0;
-  z-index: 900;
+  padding: 1.5rem;
+  z-index: 1000;
   background: transparent;
-  height: 0; /* Hide header */
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fixed-initials {
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1001;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  margin: 0.5rem 0.75rem;
+}
+
+.hamburger-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #000;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .hamburger-line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger.open .hamburger-line:nth-child(2) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+
+/* NAVIGATION MENU */
+.nav {
+  position: fixed;
+  top: -100%;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: top 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 999;
+}
+
+.nav.open {
+  top: 0;
+}
+
+.nav-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1.2rem 0;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link sup {
+  font-size: 0.8rem;
+  vertical-align: super;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width:100%;
+}
+
 
 /* SECTION COMMON STYLES */
 .section {
@@ -204,7 +308,7 @@ html, body {
   vertical-align: super;
 }
 
-/* INTRO SECTION SPECIFIC */
+/* INTRO SECTION */
 .intro-section {
   display: flex;
   flex-direction: column;
@@ -292,7 +396,7 @@ html, body {
   min-width: auto !important;
 }
 
-/* BRAND SECTION STYLES */
+/* BRAND SECTION */
 .brand-section {
   position: relative;
   background-size: cover;
@@ -471,7 +575,7 @@ html, body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background-color: currentColor;
   transform-origin: center left;
   transition: transform 0.6s ease, opacity 0.3s ease;
@@ -630,8 +734,25 @@ html, body {
   left: -10px;
 }
 
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.footer-nav-link:hover::after,
+.footer-nav-link.active::after {
+  width:100%;
+}
+
+
 .footer-nav-link sup {
-  font-size: 0.6rem;
+  font-size: 2rem;
   vertical-align: super;
 }
 
@@ -796,6 +917,32 @@ html, body {
   
   .contact-heading {
     font-size: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  
+  .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    right: 0;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 1.5rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
