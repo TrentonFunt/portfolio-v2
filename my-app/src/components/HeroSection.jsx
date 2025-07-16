@@ -37,7 +37,7 @@ const HeroSection = () => {
               <span>About</span>
             </NavLink>
             <NavLink to="/work" className="hero-nav-link">
-              <span>Work<sup>®</sup></span>
+              <span>Work<sup>(6)</sup></span>
             </NavLink>
             <NavLink to="/contact" className="hero-nav-link">
               <span>Contact</span>

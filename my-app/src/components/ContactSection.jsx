@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from "./Button";
 
 const ContactSection = ({id , image}) => {
   return (
@@ -13,9 +13,16 @@ const ContactSection = ({id , image}) => {
           Global presence, global recognition — Contact me to take your next step.
         </h2>
         <div className="contact-button-container">
-          <Link to="/contact" className="contact-button">
-            Contact me
-          </Link>
+          <Button 
+            className="contact-button"
+            text="Contact Me" 
+            onClick={() => window.location.href = "#contact"} 
+            width="fit-content"
+            padding="0.5rem 1.5rem"
+            textSize="4.5rem"
+            spanHeight="4.8rem"
+
+          />
         </div>
       </div>
     </section>

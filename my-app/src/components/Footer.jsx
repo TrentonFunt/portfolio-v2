@@ -16,7 +16,6 @@ const Footer = () => {
   return (
     <footer className="section footer-section" id="section6">
       <div className="footer-content">
-        {/* Navigation links - left aligned */}
         <nav className="footer-nav">
           <NavLink to="/" end className="footer-nav-link">
             <span>Home</span>
@@ -25,31 +24,41 @@ const Footer = () => {
             <span>About</span>
           </NavLink>
           <NavLink to="/work" className="footer-nav-link">
-            <span>Work<sup>®</sup></span>
+            <span>Work<sup>(6)</sup></span>
           </NavLink>
           <NavLink to="/contact" className="footer-nav-link">
             <span>Contact</span>
           </NavLink>
         </nav>
         
-        {/* Social media icons - bottom right */}
+        {/* Social media icons */}
         <div className="social-media">
           <div className="social-icons">
-            <a href="https://instagram.com" className="social-icon">
+            <div>
+              <a href="https://instagram.com" className="social-icon">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://twitter.com" className="social-icon">
+            </div>
+            <div>
+              <a href="https://twitter.com" className="social-icon">
               <FontAwesomeIcon icon={faSquareXTwitter} />
             </a>
-            <a href="https://linkedin.com" className="social-icon">
+            </div>
+            <div>
+              <a href="https://linkedin.com" className="social-icon">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="https:/youtube.com" className='social-icon'>
+            </div>
+            <div>
+              <a href="https:/youtube.com" className='social-icon'>
               <FontAwesomeIcon icon={faYoutube}/>
             </a>
-            <a href="https:/facebook.com" className='social-icon'>
+            </div>
+            <div>
+              <a href="https:/facebook.com" className='social-icon'>
               <FontAwesomeIcon icon={faFacebook}/>
             </a>
+            </div>
           </div>
           
           <div className="contact-info">
