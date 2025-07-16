@@ -5,7 +5,7 @@ const IntroSection = () => {
     <section className="section intro-section" id="section2">
       <div className="intro-top">
         <div className="intro-content">
-          <p className="intro-description">
+          <div className="intro-description">
             <div className="intro-image">
               <img 
                 src="images/intro-image.webp" 
@@ -16,10 +16,10 @@ const IntroSection = () => {
             I help brands craft meaningful stories and compelling visuals that deeply
             resonate with their audience, foster strong connections, build lasting loyalty,
             and drive sustainable long-term growth.
-          </p>
+          </div>
         </div>
       </div>
-      
+
       <div className="right-aligned-container">
       <hr className="section-divider" />
 
